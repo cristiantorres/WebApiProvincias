@@ -25,7 +25,7 @@ namespace WebApiProvinciasTest
         [InlineData("cristian.torres","123456")]
          public async Task loginOk(string username,string pass )
         {
-            var _url = $"http://localhost:5000/api/users/login";
+            var _url = $"http://localhost:5000/api/usuario/login";
  
             var myContent = JsonConvert.SerializeObject(new { username = username, password = pass });
             HttpContent _Body1 = new StringContent(myContent, Encoding.UTF8, "application/json");

@@ -42,13 +42,13 @@ namespace WebApiProvinciasTest
         [InlineData("Chaco")]
         [InlineData("Tucuman")]
         [InlineData("Chubut")]
-        public void GetProvinciaOk(string nombreProvincia)
+        public async Task GetProvinciaOk(string nombreProvincia)
         {
             var _url = $"http://localhost:5000/api/provincia/{nombreProvincia}";
 
             Uri _uri = new Uri(_url);
-            var responseTask = client.GetAsync(_uri);
-            Assert.True(HttpStatusCode.OK.Equals(responseTask.Result.StatusCode));
+            var responseTask = await client.GetAsync(_uri);
+            Assert.True(HttpStatusCode.OK.Equals(responseTask.StatusCode));
         }
 
 

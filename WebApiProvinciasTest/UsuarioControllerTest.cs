@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -8,7 +9,7 @@ using Xunit;
 
 namespace WebApiProvinciasTest
 {
-    class UsuarioControllerTest
+    public class UsuarioControllerTest
     {
         [Theory]
         [InlineData("cristian.torres","123456")]
@@ -17,8 +18,11 @@ namespace WebApiProvinciasTest
             var _url = $"http://localhost:5000/api/users/login";
             using (var client = new HttpClient())
             {
+                var myContent = JsonConvert.SerializeObject(new { username = username, password = pass });
+                HttpContent _Body1 = new StringContent(myContent, Encoding.UTF8, "application/json");
+
                 Uri _uri = new Uri(_url);
-                var responseTask = client.PostAsync(_uri,new HttpContent(new { username = username, password = pass }));
+                var responseTask = client.PostAsync(_uri,_Body1);
    
                 var ok = HttpStatusCode.OK.Equals(responseTask.Result.StatusCode);
                 Assert.True(ok);
@@ -32,8 +36,10 @@ namespace WebApiProvinciasTest
             var _url = $"http://localhost:5000/api/users/login";
             using (var client = new HttpClient())
             {
+                var myContent = JsonConvert.SerializeObject(new { username = username, password = pass});
+                HttpContent _Body1 = new StringContent(myContent, Encoding.UTF8, "application/json");
                 Uri _uri = new Uri(_url);
-                var responseTask = client.PostAsync(_uri, new HttpContent(new { username = username, password = pass }));
+                var responseTask = client.PostAsync(_uri, _Body1);
                 var NotFound = HttpStatusCode.NotFound.Equals(responseTask.Result.StatusCode);
                 Assert.True(NotFound);
             }

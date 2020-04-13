@@ -5,26 +5,25 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace WebApiProvinciasTest
 {
-    class ProvinciaControllerTest
-    {        /// <summary>
-             /// En este caso, este Test unitario solo comprueba si el tipo de valor devuelto es NotFound.
-             /// </summary>
+    public class ProvinciaControllerTest
+    {       
         [Theory]
         [InlineData("santander")]
         [InlineData("_lomas")]
         [InlineData("lavallol")]
-        public void GetProvinciaNotfound(string nombreProvincia)
+        public async Task GetProvinciaNotfound(string nombreProvincia)
         {
-            var _url = $"http://localhost:5000/api/provincia/{nombreProvincia}";
             using (var client = new HttpClient())
             {
-                Uri _uri = new Uri(_url);
-                var responseTask = client.GetAsync(_uri);
-                var NotOk = HttpStatusCode.NotFound.Equals(responseTask.Result.StatusCode);
+                client.BaseAddress = new Uri("http://localhost:5000/api/");
+                var route = $"provincia/{nombreProvincia}";
+                var responseTask = await client.GetAsync(route);
+                var NotOk = HttpStatusCode.NotFound.Equals(responseTask.StatusCode);
                 Assert.True(NotOk);
             }
         }

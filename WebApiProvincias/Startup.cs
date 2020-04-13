@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
  
 using WebApiProvincias.Model;
 using WebApiProvincias.Repositories;
+using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace WebApiProvincias
 {
@@ -38,13 +40,15 @@ namespace WebApiProvincias
  
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            var logger = new LoggerConfiguration();
 
+            loggerFactory.AddSerilog();
             app.UseHttpsRedirection();
 
             app.UseRouting();

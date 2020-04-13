@@ -47,11 +47,8 @@ namespace WebApiProvinciasTest
             var _url = $"http://localhost:5000/api/provincia/{nombreProvincia}";
 
             Uri _uri = new Uri(_url);
-            var responseTask = client.GetStringAsync(_uri);
-            JObject _jsonResponse = JObject.Parse(responseTask.Result);
-            var _provinciasEncontradas = (JArray)_jsonResponse["provincias"];
-            var ok = HttpStatusCode.OK.Equals(200);
-            Assert.True(ok && (_provinciasEncontradas.Count>0));
+            var responseTask = client.GetAsync(_uri);
+            Assert.True(HttpStatusCode.OK.Equals(responseTask.Result.StatusCode));
         }
 
 

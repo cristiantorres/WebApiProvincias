@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ctorres\\Documents\\Desarrollo\\EjercicioEntrega\\WebApiProvincias\\WebApiProvincias.csproj": {}
+    "C:\\Users\\ctorres\\Documents\\Desarrollo\\Git repositorios\\PruebaGitKraken\\pruebaFinal\\WebApiProvincias\\WebApiProvincias\\WebApiProvincias.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ctorres\\Documents\\Desarrollo\\EjercicioEntrega\\WebApiProvincias\\WebApiProvincias.csproj": {
+    "C:\\Users\\ctorres\\Documents\\Desarrollo\\Git repositorios\\PruebaGitKraken\\pruebaFinal\\WebApiProvincias\\WebApiProvincias\\WebApiProvincias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ctorres\\Documents\\Desarrollo\\EjercicioEntrega\\WebApiProvincias\\WebApiProvincias.csproj",
+        "projectUniqueName": "C:\\Users\\ctorres\\Documents\\Desarrollo\\Git repositorios\\PruebaGitKraken\\pruebaFinal\\WebApiProvincias\\WebApiProvincias\\WebApiProvincias.csproj",
         "projectName": "WebApiProvincias",
-        "projectPath": "C:\\Users\\ctorres\\Documents\\Desarrollo\\EjercicioEntrega\\WebApiProvincias\\WebApiProvincias.csproj",
+        "projectPath": "C:\\Users\\ctorres\\Documents\\Desarrollo\\Git repositorios\\PruebaGitKraken\\pruebaFinal\\WebApiProvincias\\WebApiProvincias\\WebApiProvincias.csproj",
         "packagesPath": "C:\\Users\\ctorres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ctorres\\Documents\\Desarrollo\\EjercicioEntrega\\WebApiProvincias\\obj\\",
+        "outputPath": "C:\\Users\\ctorres\\Documents\\Desarrollo\\Git repositorios\\PruebaGitKraken\\pruebaFinal\\WebApiProvincias\\WebApiProvincias\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

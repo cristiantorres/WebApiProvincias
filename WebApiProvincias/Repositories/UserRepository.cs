@@ -13,6 +13,12 @@ namespace WebApiProvincias.Repositories
          
         private List<User> _listUsers = new List<User>();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public User GetUserByLogin(string username, string password)
         {
           return  _listUsers.FirstOrDefault(x => x.username == username && x.password == password);

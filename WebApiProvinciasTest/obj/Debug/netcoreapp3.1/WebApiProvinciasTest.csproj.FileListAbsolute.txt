@@ -1,0 +1,4 @@
+C:\Users\ctorres\Documents\Desarrollo\Git repositorios\PruebaGitKraken\pruebaFinal\WebApiProvincias\WebApiProvinciasTest\obj\Debug\netcoreapp3.1\WebApiProvinciasTest.csprojAssemblyReference.cache
+C:\Users\ctorres\Documents\Desarrollo\Git repositorios\PruebaGitKraken\pruebaFinal\WebApiProvincias\WebApiProvinciasTest\obj\Debug\netcoreapp3.1\WebApiProvinciasTest.csproj.CoreCompileInputs.cache
+C:\Users\ctorres\Documents\Desarrollo\Git repositorios\PruebaGitKraken\pruebaFinal\WebApiProvincias\WebApiProvinciasTest\obj\Debug\netcoreapp3.1\WebApiProvinciasTest.AssemblyInfoInputs.cache
+C:\Users\ctorres\Documents\Desarrollo\Git repositorios\PruebaGitKraken\pruebaFinal\WebApiProvincias\WebApiProvinciasTest\obj\Debug\netcoreapp3.1\WebApiProvinciasTest.AssemblyInfo.cs

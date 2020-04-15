@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebApiProvincias.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ProvinciaDTO
     {
- 
 
         public ProvinciaDTO(string nombre1, string latitud, string longitud)
         {

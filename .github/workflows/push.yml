@@ -17,9 +17,10 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore
-      - name: Build
+        run: dotnet restore ./WebApiProvincias/WebApiProvincias.sln
+      - name: Build ./WebApiProvincias/WebApiProvincias.sln
         run: dotnet build --configuration Release --no-restore
-      - name: Test
+      - name: Test ./WebApiProvinciasTest/WebApiProvinciasTest.csproj
+
         run: dotnet test --no-restore --verbosity normal
 
